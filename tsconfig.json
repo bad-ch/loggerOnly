@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "noImplicitAny": true,
+    "rootDir": "./src",
+    "outDir": "./build",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": false,
+    "declaration": true,
+    "moduleResolution": "node",
+    "typeRoots": ["./node_modules/@types"],
+    "lib": ["esnext", "dom"],
+    "types": [
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "./index.d.ts",
+    "build"
+  ],
+  "typedocOptions": {
+    "entryPoints": ["src"],
+    "out": "docs",
+    "exclude": "**/*+(index|.spec|.e2e).ts"
+  }
+}

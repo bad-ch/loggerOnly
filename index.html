@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo typescript-logger</title>
+
+    <script src="dist/conLog.js"></script>
+</head>
+<body>
+<h1>Demo</h1>
+<h3>Open the console to see the log. (Chromes by default hides the debug logs)</h3>
+<button onclick="runLogs()">Run logs</button>
+<script type="text/javascript">
+    //import {Logger, Display, Level} from Loggi;
+
+    function runLogs(){
+        const logger = new conLog.Logger({logLevel: 5, timeStampFormat: 'dd.MM.yyyy hh:mm:ss'})
+
+        window.console = logger;
+
+        console.debug('Test ori debug')
+        console.log('Test ori log')
+        console.info('Test ori info')
+        console.warn('Test ori warn')
+        console.error('Test ori error')
+        console.fatal('Test ori fatal')
+
+        logger.debug('Test ori debug')
+        logger.log('Test ori log', 'Modul1')
+        logger.info('Test ori info')
+        logger.warn('Test ori warn')
+        logger.error('Test ori error')
+        logger.fatal('Test ori fatal')
+
+        window.console = logger.originalInstance();
+        delete logger;
+
+        console.log('Test console after')
+    }
+  </script>
+</body>
+</html>
