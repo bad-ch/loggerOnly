@@ -1,7 +1,7 @@
 {
-  "name": "loggi",
-  "version": "0.4.0",
-  "description": "logger for typescript",
+  "name": "conLog",
+  "version": "1.0.0",
+  "description": "logger for typescript and javascript",
   "main": "build/index.js",
   "scripts": {
     "build": "npm run build:tsc",
