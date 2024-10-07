@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bad-ch/conLog.git"
+    "url": "git+https://github.com/bad-ch/loggerOnly.git"
   },
   "keywords": [
     "typescript",
