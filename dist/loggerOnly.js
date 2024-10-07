@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define("conLog", [], factory);
+		define("loggerOnly", [], factory);
 	else if(typeof exports === 'object')
-		exports["conLog"] = factory();
+		exports["loggerOnly"] = factory();
 	else
-		root["conLog"] = factory();
+		root["loggerOnly"] = factory();
 })(self, () => {
 return /******/ (() => { // webpackBootstrap
 /******/ 	"use strict";
@@ -340,4 +340,4 @@ __webpack_require__.r(__webpack_exports__);
 /******/ })()
 ;
 });
-//# sourceMappingURL=conLog.js.map
+//# sourceMappingURL=loggerOnly.js.map

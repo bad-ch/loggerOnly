@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Demo typescript-logger</title>
 
-    <script src="dist/conLog.js"></script>
+    <script src="dist/loggerOnly.js"></script>
 </head>
 <body>
 <h1>Demo</h1>
@@ -14,7 +14,7 @@
     //import {Logger, Display, Level} from Loggi;
 
     function runLogs(){
-        const logger = new conLog.Logger({logLevel: 5, timeStampFormat: 'dd.MM.yyyy hh:mm:ss'})
+        const logger = new loggerOnly.Logger({logLevel: 5, timeStampFormat: 'dd.MM.yyyy hh:mm:ss'})
 
         window.console = logger;
 

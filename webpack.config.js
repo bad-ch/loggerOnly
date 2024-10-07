@@ -6,9 +6,9 @@ module.exports = {
   devtool: 'source-map',
   output : {
     path: path.resolve(__dirname, "dist"),
-    filename: "conLog.js",
+    filename: "loggerOnly.js",
     library: {
-        name: 'conLog',
+        name: 'loggerOnly',
         type: 'umd',
         umdNamedDefine: true
       },

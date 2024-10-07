@@ -1,5 +1,5 @@
 {
-  "name": "conLog",
+  "name": "loggeronly",
   "version": "1.0.0",
   "description": "logger for typescript and javascript",
   "main": "build/index.js",
@@ -11,11 +11,17 @@
     "docs": "npm run clean:docs && npm run build:docs",
     "release": "webpack --config webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bad-ch/conLog.git"
+  },
   "keywords": [
     "typescript",
     "logger",
     "log"
   ],
+  "author": "Daniel Baumgartner",
+  "license": "ISC",
   "devDependencies": {
     "http-server": "^0.12.3",
     "typescript": "4.2.4",
