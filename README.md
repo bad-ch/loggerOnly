@@ -84,6 +84,10 @@
       }
     }
 
+# Screenshot
+
+[![Screenshot](https://github.com/bad-ch/loggerOnly/blob/fe641a0353841ab077876513e182592432d69611/docs/example.png "Screenshot")](https://github.com/bad-ch/loggerOnly/blob/fe641a0353841ab077876513e182592432d69611/docs/example.png "Screenshot")
+
 # Other Topics
 
 - Please have a look to index.html.
