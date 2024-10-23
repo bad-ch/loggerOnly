@@ -5,6 +5,7 @@
 - set css styles for console output
 - replace current console
 - add time stamps and set format
+- no dependencies
 
 # Examples Javascript
 
@@ -26,6 +27,8 @@
         function runLogs(){
             const logger = new loggerOnly.Logger({logLevel: 5, timeStampFormat: 'dd.MM.yyyy hh:mm:ss'})
     
+            console.log(logger.logLevel());
+
             window.console = logger;
     
             console.debug('Test ori debug')
@@ -34,7 +37,8 @@
             console.warn('Test ori warn')
             console.error('Test ori error')
             console.fatal('Test ori fatal')
-    
+            console.debug(console.logLevel());
+            
             logger.debug('Test ori debug')
             logger.log('Test ori log', 'Modul1')
             logger.info('Test ori info')
