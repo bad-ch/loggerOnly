@@ -6,6 +6,19 @@ export class Logger {
   private _consoleOriginal: Console;
   private _config: Config;
 
+  public config(): Config {
+    return this._config;
+  }
+
+  private _logLevelAsString: { [level in Level]: string } = {
+    [Level.DEBUG]: 'Debug',
+    [Level.LOG]: 'Log',
+    [Level.INFO]: 'Info',
+    [Level.WARN]: 'Warning',
+    [Level.ERROR]: 'Error',
+    [Level.FATAL]: 'Fatal'
+  };
+
   constructor(config: Config | undefined) {
     this._consoleOriginal = window.console;
 
@@ -57,6 +70,10 @@ export class Logger {
 
   fatal(message: string, moduleName: string) {
     return this._logMessage(message, Level.FATAL, moduleName);
+  }
+
+  logLevel(): string {
+    return this._logLevelAsString[this._config.logLevel]
   }
 
   private _logMessage(message: string, level: Level, moduleName: string) {

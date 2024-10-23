@@ -93,7 +93,7 @@ class Display {
                 originalReference.info.apply(console, params);
                 break;
             case _level__WEBPACK_IMPORTED_MODULE_0__.Level.DEBUG:
-                originalReference.debug.apply(console, params);
+                originalReference.info.apply(console, params);
                 break;
             case _level__WEBPACK_IMPORTED_MODULE_0__.Level.LOG:
                 originalReference.log.apply(console, params);
@@ -198,6 +198,14 @@ __webpack_require__.r(__webpack_exports__);
 
 class Logger {
     constructor(config) {
+        this._logLevelAsString = {
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.DEBUG]: 'Debug',
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.LOG]: 'Log',
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.INFO]: 'Info',
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.WARN]: 'Warning',
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.ERROR]: 'Error',
+            [_level__WEBPACK_IMPORTED_MODULE_0__.Level.FATAL]: 'Fatal'
+        };
         this._consoleOriginal = window.console;
         if (!config) {
             this._config = new _config__WEBPACK_IMPORTED_MODULE_2__.Config();
@@ -221,6 +229,9 @@ class Logger {
             }
         }
     }
+    config() {
+        return this._config;
+    }
     originalInstance() {
         return this._consoleOriginal;
     }
@@ -241,6 +252,9 @@ class Logger {
     }
     fatal(message, moduleName) {
         return this._logMessage(message, _level__WEBPACK_IMPORTED_MODULE_0__.Level.FATAL, moduleName);
+    }
+    logLevel() {
+        return this._logLevelAsString[this._config.logLevel];
     }
     _logMessage(message, level, moduleName) {
         _display__WEBPACK_IMPORTED_MODULE_1__.Display.msg(this._consoleOriginal, message, level, moduleName, this._config);

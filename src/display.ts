@@ -47,7 +47,7 @@ export class Display {
                 originalReference.info.apply(console, params);
                 break;
             case Level.DEBUG:
-                originalReference.debug.apply(console, params);
+                originalReference.info.apply(console, params);
                 break;
             case Level.LOG:
                 originalReference.log.apply(console, params);

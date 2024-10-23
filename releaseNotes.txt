@@ -1,0 +1,4 @@
+1.1.0
+
+- Get current log level as string
+- Fix console.debug output

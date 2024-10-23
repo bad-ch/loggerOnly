@@ -3,6 +3,14 @@ import { Display } from "./display";
 import { Config } from "./config";
 export class Logger {
     constructor(config) {
+        this._logLevelAsString = {
+            [Level.DEBUG]: 'Debug',
+            [Level.LOG]: 'Log',
+            [Level.INFO]: 'Info',
+            [Level.WARN]: 'Warning',
+            [Level.ERROR]: 'Error',
+            [Level.FATAL]: 'Fatal'
+        };
         this._consoleOriginal = window.console;
         if (!config) {
             this._config = new Config();
@@ -26,6 +34,9 @@ export class Logger {
             }
         }
     }
+    config() {
+        return this._config;
+    }
     originalInstance() {
         return this._consoleOriginal;
     }
@@ -46,6 +57,9 @@ export class Logger {
     }
     fatal(message, moduleName) {
         return this._logMessage(message, Level.FATAL, moduleName);
+    }
+    logLevel() {
+        return this._logLevelAsString[this._config.logLevel];
     }
     _logMessage(message, level, moduleName) {
         Display.msg(this._consoleOriginal, message, level, moduleName, this._config);

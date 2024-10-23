@@ -16,21 +16,24 @@
     function runLogs(){
         const logger = new loggerOnly.Logger({logLevel: 5, timeStampFormat: 'dd.MM.yyyy hh:mm:ss'})
 
+        console.log(logger.logLevel());
+
         window.console = logger;
 
-        console.debug('Test ori debug')
-        console.log('Test ori log')
-        console.info('Test ori info')
-        console.warn('Test ori warn')
-        console.error('Test ori error')
-        console.fatal('Test ori fatal')
+        console.debug('Test ori debug');
+        console.log('Test ori log');
+        console.info('Test ori info');
+        console.warn('Test ori warn');
+        console.error('Test ori error');
+        console.fatal('Test ori fatal');
+        console.debug(console.logLevel());
 
-        logger.debug('Test ori debug')
-        logger.log('Test ori log', 'Modul1')
-        logger.info('Test ori info')
-        logger.warn('Test ori warn')
-        logger.error('Test ori error')
-        logger.fatal('Test ori fatal')
+        logger.debug('Test ori debug');
+        logger.log('Test ori log', 'Modul1');
+        logger.info('Test ori info');
+        logger.warn('Test ori warn');
+        logger.error('Test ori error');
+        logger.fatal('Test ori fatal');
 
         window.console = logger.originalInstance();
         delete logger;
