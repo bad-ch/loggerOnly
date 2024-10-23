@@ -38,7 +38,7 @@
             console.error('Test ori error')
             console.fatal('Test ori fatal')
             console.debug(console.logLevel());
-            
+
             logger.debug('Test ori debug')
             logger.log('Test ori log', 'Modul1')
             logger.info('Test ori info')
@@ -91,6 +91,10 @@
 # Screenshot
 
 [![Screenshot](https://github.com/bad-ch/loggerOnly/blob/fe641a0353841ab077876513e182592432d69611/docs/example.png "Screenshot")](https://github.com/bad-ch/loggerOnly/blob/fe641a0353841ab077876513e182592432d69611/docs/example.png "Screenshot")
+
+# Release notes
+
+[Release notes](https://github.com/bad-ch/loggerOnly/blob/c473c9bef4f10bed41ad97756ae7e248601cd55c/releaseNotes.txt "Release notes")
 
 # Other Topics
 
